@@ -1,0 +1,14 @@
+{
+  "name": "microfrontend-platform",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel --filter './apps/*' dev",
+    "build": "pnpm --recursive --if-present build",
+    "test": "pnpm --recursive --if-present test",
+    "lint": "oxlint apps/"
+  },
+  "devDependencies": {
+    "oxlint": "^1.93.0"
+  }
+}
