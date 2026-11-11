@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "pnpm --parallel --filter './apps/*' dev",
+    "dev": "pnpm --parallel --filter shell --filter mf-products --filter mf-categories dev",
     "build": "pnpm --recursive --if-present build",
     "test": "pnpm --recursive --if-present test",
     "lint": "oxlint apps/"
