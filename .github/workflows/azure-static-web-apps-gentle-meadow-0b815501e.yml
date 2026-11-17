@@ -31,6 +31,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Build shell
+        env:
+          VITE_PRODUCTS_REMOTE_URL: ${{ vars.VITE_PRODUCTS_REMOTE_URL }}
+          VITE_CATEGORIES_REMOTE_URL: ${{ vars.VITE_CATEGORIES_REMOTE_URL }}
         run: pnpm --filter shell build
       - name: Build And Deploy
         id: builddeploy
